@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1565c0">
+  <title>ParkingNavi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Basemap-Umschalter -->
+  <div id="basemap-switch" class="card">
+    <button data-layer="topo" class="active">Topo</button>
+    <button data-layer="sat">Satellit</button>
+  </div>
+
+  <!-- Navigationsanzeige (oben) -->
+  <div id="nav-banner" class="card hidden">
+    <div id="nav-arrow">↑</div>
+    <div>
+      <div id="nav-dist">–</div>
+      <div id="nav-text">–</div>
+    </div>
+  </div>
+
+  <!-- Statusmeldungen -->
+  <div id="toast" class="hidden"></div>
+
+  <!-- Bedienfeld (unten) -->
+  <div id="panel" class="card">
+    <div id="panel-info" class="hidden"></div>
+    <div id="panel-buttons">
+      <button id="btn-locate" title="Auf meinen Standort zentrieren">◎ Standort</button>
+      <button id="btn-nearest" class="primary">🅿 Nächster Parkplatz</button>
+      <button id="btn-stop" class="danger hidden">✕ Beenden</button>
+      <button id="btn-voice" class="hidden" title="Sprachansagen an/aus">🔊</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
